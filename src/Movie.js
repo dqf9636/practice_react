@@ -20,17 +20,14 @@ class Movie extends Component{
     }
 }
 
-class MoviePoster extends Component{
-    
-    static propTypes = {
-        poster: PropTypes.string.isRequired
-    }
-    render(){
-        console.log(this.props);
-        return(
-            <img src={this.props.poster}/>
-        )
-    }
+function MoviePoster({poster}) {
+    return (
+         <img src={poster} alt="Movie Poster"/>
+    )
+}
+
+MoviePoster.propTypes = {
+    poster: PropTypes.string.isRequired
 }
 
 export default Movie
